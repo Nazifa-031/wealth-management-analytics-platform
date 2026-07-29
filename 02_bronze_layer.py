@@ -1,9 +1,7 @@
 # Databricks notebook source
 # MAGIC %md
 # MAGIC # 02 — Bronze Layer
-# MAGIC Ingests every `raw.*` table as-is into `bronze.*`, adding standard ingestion
-# MAGIC metadata columns. No business logic or cleaning happens here — bronze is a
-# MAGIC faithful, auditable copy of the source extract.
+# MAGIC Ingests every `raw.*` table as-is into `bronze.*`
 
 # COMMAND ----------
 
