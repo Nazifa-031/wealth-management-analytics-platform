@@ -12,7 +12,7 @@ Structure of Execution
 │   ├── 06_data_marts.py
 │   └── 07_dashboard_queries.sql
 ├── databricks-api/          (your Express API — server.js, package.json, .gitignore, NOT .env) API FILES
-└── rag-pipeline/            (your Python RAG — all .py files, requirements.txt, NOT .env) RAG FILES
+└── rag-pipeline/            (your Python RAG — all .py files, NOT .env) RAG FILES
 
 # Wealth Report Generator
 
