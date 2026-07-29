@@ -1,11 +1,4 @@
--- =====================================================================
--- Phase 4: Visualization — Databricks SQL (Lakeview) Dashboard Queries
--- =====================================================================
--- Each query below is meant to become ONE widget in a Lakeview dashboard.
--- Workflow per query: Databricks SQL Editor -> paste query -> Save as a
--- Query -> open/create a Lakeview Dashboard -> "Add visualization" ->
--- pick the saved query -> choose the chart type noted in the comment.
---
+
 -- Organized into 5 dashboard pages:
 --   A. Executive Summary
 --   B. Client & Portfolio
