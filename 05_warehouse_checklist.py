@@ -1,8 +1,8 @@
 # Databricks notebook source
 # MAGIC %md
 # MAGIC # Warehouse Layer — Completion Checklist
-# MAGIC Verifies all 11 warehouse tables exist and are populated, and prints a
-# MAGIC manager-friendly summary matching the design doc's "Final Warehouse Tables" list.
+# MAGIC Verifies all 11 warehouse tables exist and are populated.
+
 
 # COMMAND ----------
 
@@ -46,7 +46,7 @@ else:
 
 # COMMAND ----------
 
-# MAGIC %md ### Same thing as a SQL table, for a screenshot
+# MAGIC %md ### trying in sql
 
 # COMMAND ----------
 
