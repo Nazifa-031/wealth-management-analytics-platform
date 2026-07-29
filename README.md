@@ -1,7 +1,10 @@
-# wealth-management-analytics-platform
+# Wealth Management Analytics Platform
 
-Structure of Execution
- wealth-management-analytics-platform/
+## Structure of Execution
+
+```text
+wealth-management-analytics-platform/
+│
 ├── databricks-notebooks/
 │   ├── 00_setup.py
 │   ├── 01_data_generation.py
@@ -11,31 +14,74 @@ Structure of Execution
 │   ├── 05_warehouse_checklist.py
 │   ├── 06_data_marts.py
 │   └── 07_dashboard_queries.sql
-├── databricks-api/          (your Express API — server.js, package.json, .gitignore, NOT .env) API FILES
-└── rag-pipeline/            (your Python RAG — all .py files, NOT .env) RAG FILES
+│
+├── databricks-api/
+│   ├── server.js
+│   ├── package.json
+│   ├── .gitignore
+│   └── (Do NOT include .env)
+│
+└── rag-pipeline/
+    ├── prepare.py
+    ├── build2.py
+    ├── ask3.py
+    ├── genreport4.py
+    └── (Do NOT include .env)
+```
 
-# Wealth Report Generator
+## Execution
 
-Generates AI-narrated HTML investment reports for any mart in the system
-— client, advisor, scheme, AMC, or a firm-wide executive summary — from
-either a chat interface (`ask.py`) or a standalone CLI (`04_generate_report.py`).
+### 1. Databricks Notebooks
 
-Both share one engine (`report_utils.py`), so a phrase like
-`"create a report for Rohan Mehta"` is understood identically no matter
-which one you type it into.
+Run the notebooks in numerical order:
 
----
+1. `00_setup.py`
+2. `01_data_generation.py`
+3. `02_bronze_layer.py`
+4. `03_silver_layer.py`
+5. `04_warehouse_layer.py`
+6. `05_warehouse_checklist.py`
+7. `06_data_marts.py`
+8. `07_dashboard_queries.sql`
 
-## Files
+### 2. API
 
-| File | What it is |
-|---|---|
-| `report_utils.py` | The engine. All mart config, data fetching, AI narrative generation, HTML rendering, and natural-language request parsing live here. |
-| `ask.py` | Interactive chat loop. Routes each question to report generation, analytical computation (`analytics.py`), or RAG-based Q&A. |
-| `04_generate_report.py` | Standalone CLI, report generation only. No embedding model or ChromaDB required, so it starts instantly. |
-| `analytics.py` | *(not modified here)* Exact-computation engine for Top-N / totals / averages / rankings, and the mart-keyword detector (`detect_mart`) that report parsing also reuses. |
+1. Download all API files into the **databricks-api** folder.
+2. Open a terminal in that folder.
+3. Install dependencies:
 
----
+```bash
+npm install
+```
+
+4. Start the API:
+
+```bash
+npm start
+```
+
+The Express server will start on the configured port.
+
+### 3. RAG Pipeline
+
+Create a folder named **rag-pipeline** and copy the following files into it:
+
+* `prepare.py`
+* `build2.py`
+* `ask3.py`
+* `genreport4.py`
+
+Run them in the following order:
+
+```text
+1. prepare.py
+2. build2.py
+3. ask3.py
+4. genreport4.py
+```
+
+> **Note:** Ensure the API is running before executing the RAG pipeline, as it retrieves live data from the API.
+
 
 ## Setup
 
