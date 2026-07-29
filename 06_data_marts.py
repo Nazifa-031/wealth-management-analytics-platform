@@ -3,7 +3,7 @@
 # MAGIC # 06 — Phase 3: Data Marts
 # MAGIC Builds 8 business-facing data marts on top of `warehouse.*`, written to a new
 # MAGIC `mart` schema. Each mart is a denormalized, pre-aggregated table designed to be
-# MAGIC queried directly by a dashboard/BI tool — no joins required downstream.
+# MAGIC queried directly by dashboard — no joins required 
 
 # COMMAND ----------
 
@@ -312,5 +312,4 @@ executive_dashboard.show(truncate=False)
 
 # MAGIC %md
 # MAGIC ## Checklist
-# MAGIC 7 recurring marts + the executive dashboard = **8 data marts**, all built directly
-# MAGIC on `warehouse.*` with no further joins needed for a BI tool to consume them.
+
