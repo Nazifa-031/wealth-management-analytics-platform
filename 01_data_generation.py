@@ -1,13 +1,8 @@
 # Databricks notebook source
 # MAGIC %md
 # MAGIC # 01 — Raw Data Generation
-# MAGIC Generates synthetic data for all 9 source systems (24 tables) of the Wealth
-# MAGIC Management Analytics Platform, and writes each as a managed Delta table in the
-# MAGIC `raw` schema.
-# MAGIC
-# MAGIC Source systems covered: Client Management, Advisor Management, AMC Management,
-# MAGIC Scheme Management, Transaction Management, SIP Management, Revenue Management,
-# MAGIC Goal Planning, Portfolio Management.
+# MAGIC 24 tables generated across 9 source systems (Client, Advisor, AMC, Scheme,
+# MAGIC Transaction, SIP, Revenue, Goal, Portfolio).
 
 # COMMAND ----------
 
