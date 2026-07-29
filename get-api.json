@@ -1,0 +1,64 @@
+{
+  "info": {
+    "name": "AnytimeInvest API",
+    "description": "Endpoints for the Wealth Management Analytics Platform - all 8 data marts",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:3000" },
+    { "key": "client_id", "value": "101" }
+  ],
+  "item": [
+    
+    { 
+      "name": "Hello",
+      "request": { "method": "GET", "url": "{{base_url}}/api/hello" }
+    },
+    {
+      "name": "Health Check",
+      "request": { "method": "GET", "url": "{{base_url}}/health" }
+    },
+    {
+      "name": "Get All Customers",
+      "request": { "method": "GET", "url": "{{base_url}}/api/customers" }
+    },
+    {
+      "name": "Get One Customer",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/customers/{{client_id}}"
+      }
+    },
+    {
+      "name": "Get All Advisors",
+      "request": { "method": "GET", "url": "{{base_url}}/api/advisors" }
+    },
+    {
+      "name": "Get All Schemes",
+      "request": { "method": "GET", "url": "{{base_url}}/api/schemes" }
+    },
+    {
+      "name": "Get Revenue",
+      "request": { "method": "GET", "url": "{{base_url}}/api/revenue" }
+    },
+    {
+      "name": "Get SIP Analytics",
+      "request": { "method": "GET", "url": "{{base_url}}/api/sip-analytics" }
+    },
+    {
+      "name": "Get Redemptions",
+      "request": { "method": "GET", "url": "{{base_url}}/api/redemptions" }
+    },
+    {
+      "name": "Get AMC Business",
+      "request": { "method": "GET", "url": "{{base_url}}/api/amc" }
+    },
+    {
+      "name": "Get Executive Dashboard",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/api/executive-dashboard"
+      }
+    }
+  ]
+}

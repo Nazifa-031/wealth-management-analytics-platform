@@ -1,0 +1,14 @@
+{
+  "name": "databricks-customer-api",
+  "version": "1.0.0",
+  "description": "Small API that queries Databricks and returns customer data as JSON",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@databricks/sql": "^1.8.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
