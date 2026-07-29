@@ -337,15 +337,8 @@ print(f"warehouse.fact_commissions -> {fact_commissions.count()} rows")
 
 # MAGIC %md ## fact_portfolio_aum
 # MAGIC Grain: one row per client + scheme + day.
-# MAGIC
-# MAGIC Units held on any given day = cumulative (purchase units + SIP units - redeemed
-# MAGIC units) as of that day. This is built as an event-sourced running total, then
-# MAGIC forward-filled onto each NAV date so every (client, scheme) pair gets a market
-# MAGIC value for every day it had NAV data.
-# MAGIC
-# MAGIC **Note:** this is the heaviest step in the pipeline. If it runs slowly on your
-# MAGIC serverless compute, reduce `NAV_DAYS` or the client/scheme volumes in
-# MAGIC `01_data_generation` and re-run the whole pipeline.
+
+
 
 # COMMAND ----------
 
@@ -466,7 +459,7 @@ print(f"warehouse.fact_portfolio_aum -> {fact_portfolio_aum.count()} rows")
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC ## Sanity check: AUM reporting
+# MAGIC ## check: AUM reporting
 # MAGIC Quick spot check that the star schema actually answers a business question —
 # MAGIC total AUM per advisor as of the most recent date.
 
